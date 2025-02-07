@@ -21,7 +21,7 @@ const Catalog = () => {
 	const genres = Number(query.get("genres")) || 0;
 	const country = query.get("country") || "";
 	const searchQuery = query.get("search") || "";
-	const [sortOrder, setSortOrder] = useState<string>("asc");
+	const [sortOrder, setSortOrder] = useState<string>("desc");
 
 	console.log("Search Query:", searchQuery);
 

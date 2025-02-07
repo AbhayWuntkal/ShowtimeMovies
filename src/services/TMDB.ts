@@ -28,7 +28,7 @@ export const tmdbApi = createApi({
         country?: string;
       }) => {
         if (searchQuery) {
-          return `search/${category}?api_key=${API_KEY}&query=${searchQuery}&page=${page}`;
+          return `search/${category === "discover" ? type : category}?api_key=${API_KEY}&query=${searchQuery}&page=${page}`;
         }
 
         if (showSimilarShows) {

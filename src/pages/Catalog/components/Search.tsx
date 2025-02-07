@@ -4,17 +4,19 @@ import { GoSearch } from "react-icons/go";
 
 interface SearchProps {
 	setQuery: (val: {}) => void;
+	type?: string;
+	country?: string;
+	genres?: number;
 }
 
-const Search: React.FC<SearchProps> = ({ setQuery }) => {
+const Search: React.FC<SearchProps> = ({ setQuery, type, country, genres }) => {
 	const { category } = useParams();
 	const [search, setSearch] = useState<string>("");
 
 	const handleSubmit = (e: React.FormEvent) => {
 		e.preventDefault();
 		if (!search) return;
-		setQuery({ search });
-		
+		setQuery({ search, type, country, genres });
 	};
 
 	return (
@@ -27,7 +29,7 @@ const Search: React.FC<SearchProps> = ({ setQuery }) => {
 				className='py-[8px] pl-[20px] pr-[36px]  rounded-full outline-none w-[300px] md:w-[340px]  shadow-md transition-all duration-300 focus:shadow-sm text-[#666] focus:bg-[#ffffff] bg-[#fdfdfd] font-medium dark:bg-[#302d3a] dark:text-primary dark:focus:bg-[#474550]'
 				onChange={(e) => {
 					setSearch(e.target.value);
-					setQuery({ search: e.target.value });
+					setQuery({ search: e.target.value, type, country, genres });
 				}}
 				value={search}
 				placeholder={`Search ${category === "movie" ? "movies" : "tv series"}`}

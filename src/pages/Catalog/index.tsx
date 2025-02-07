@@ -13,6 +13,8 @@ const Catalog = () => {
 	const [shows, setShows] = useState<IMovie[]>([]);
 	const [isCategoryChanged, setIsCategoryChanged] = useState<boolean>(false);
 	const [query, setQuery] = useSearchParams();
+	console.log("Query:", query);
+
 	const { category } = useParams();
 
 	const type = query.get("type") || "popular";
@@ -62,7 +64,12 @@ const Catalog = () => {
 		<>
 			<CatalogHeader category={String(category)} />
 			<section className={`${smallMaxWidth} `}>
-				<Search setQuery={setQuery} />
+				<Search
+					setQuery={setQuery}
+					type={type}
+					country={country}
+					genres={genres}
+				/>
 
 				{/* Sorting Dropdown */}
 				<div className='flex justify-end my-4'>
@@ -101,7 +108,7 @@ const Catalog = () => {
 							>
 								<MovieCard
 									movie={movie}
-									category={String(category == "discover" ? type : category)}
+									category={String(category === "discover" ? type : category)}
 								/>
 							</div>
 						))}

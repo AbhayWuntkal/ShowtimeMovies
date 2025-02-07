@@ -59,6 +59,13 @@ export const sections = [
     type: "popular",
   },
   {
+    title: "Trending Anime",
+    category: "discover",
+    type: "tv",
+    genres: 16,
+    country: "JP"
+  },
+  {
     title: "Top rated movies",
     category: "movie",
     type: "top_rated",

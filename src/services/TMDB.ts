@@ -16,6 +16,7 @@ export const tmdbApi = createApi({
         showSimilarShows,
         id,
         genres,
+        country = ""
       }: {
         category: string | undefined;
         type?: string;
@@ -24,6 +25,7 @@ export const tmdbApi = createApi({
         showSimilarShows?: boolean;
         id?: number;
         genres?: number;
+        country?: string;
       }) => {
         if (searchQuery) {
           return `search/${category}?api_key=${API_KEY}&query=${searchQuery}&page=${page}`;
@@ -34,7 +36,7 @@ export const tmdbApi = createApi({
         }
 
         if (genres) {
-          return `${category}/${type}?api_key=${API_KEY}&with_genres=${genres}&with_origin_country=US&page=${page}`;
+          return `${category}/${type}?api_key=${API_KEY}&with_genres=${genres}&with_origin_country=${country ? country : "US"}&page=${page}`;
         }
 
         return `${category}/${type}?api_key=${API_KEY}&page=${page}`;

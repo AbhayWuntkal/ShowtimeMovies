@@ -29,9 +29,18 @@ const Home = () => {
 		<>
 			<Hero movies={popularMovies} />
 			<div className={cn(maxWidth, "lg:mt-12 md:mt-8 sm:mt-6 xs:mt-4 mt-2")}>
-				{sections.map(({ title, category, type }) => (
-					<Section title={title} category={category} type={type} key={title} />
-				))}
+				{sections.map(
+					({ title, category, type, genres = undefined, country = "" }) => (
+						<Section
+							title={title}
+							category={category}
+							type={type}
+							key={title}
+							genres={genres}
+							country={country}
+						/>
+					)
+				)}
 			</div>
 		</>
 	);

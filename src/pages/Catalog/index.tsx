@@ -16,6 +16,8 @@ const Catalog = () => {
 	const { category } = useParams();
 
 	const type = query.get("type") || "popular";
+	const genres = Number(query.get("genres")) || 0;
+	const country = query.get("country") || "";
 	const searchQuery = query.get("search") || "";
 	const [sortOrder, setSortOrder] = useState<string>("asc");
 
@@ -26,6 +28,8 @@ const Catalog = () => {
 		page,
 		searchQuery,
 		type,
+		genres,
+		country,
 	});
 
 	// Reset page & shows when search query or category changes
@@ -95,7 +99,10 @@ const Catalog = () => {
 								className='relative flex flex-col xs:gap-4 gap-2 xs:max-w-[170px] max-w-[124px] rounded-lg lg:mb-6 md:mb-5 sm:mb-4 mb-[10px]'
 								style={{ zIndex: 1 }}
 							>
-								<MovieCard movie={movie} category={String(category)} />
+								<MovieCard
+									movie={movie}
+									category={String(category == "discover" ? type : category)}
+								/>
 							</div>
 						))}
 					</div>

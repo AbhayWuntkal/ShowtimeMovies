@@ -35,7 +35,7 @@ const Favorites = () => {
 	return (
 		<>
 			<CatalogHeader category={String("Favorites")} />
-			<section className={`${smallMaxWidth} `}>
+			<section className={`${smallMaxWidth} min-h-[90vh] flex flex-col`}>
 				<div className='flex justify-end my-4'>
 					<label className='mr-2 mt-2 text-gray-700 dark:text-gray-300'>
 						Sort by:
@@ -60,10 +60,11 @@ const Favorites = () => {
 					</select>
 				</div>
 
-				{/* <h2 className="text-center text-2xl font-bold my-6 text-gray-300 ">Favorite Movies</h2> */}
-
+				{/* Empty state handling */}
 				{sortedMovies.length === 0 ? (
-					<p className='text-center text-gray-500'>No favorite movies yet.</p>
+					<p className='text-center text-gray-500 flex-grow'>
+						No favorite movies yet.
+					</p>
 				) : (
 					<div className='flex flex-wrap xs:gap-4 gap-[14px] justify-center'>
 						{sortedMovies.map((movie) => (

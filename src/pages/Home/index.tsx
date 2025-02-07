@@ -10,7 +10,7 @@ const Home = () => {
 	const { data, isLoading, isError } = useGetShowsQuery({
 		category: "discover",
 		type: "movie",
-		genres: 12,
+		genres: 27,
 
 		page: 1,
 	});

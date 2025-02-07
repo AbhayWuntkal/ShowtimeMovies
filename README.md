@@ -33,7 +33,10 @@
 
 🌍 Deployment <br />
 This project is deployed on Vercel. <br />
-https://movie-2n1gy19zi-abhay-wuntkals-projects.vercel.app/
+
+<a href="https://showtime-movie-app.vercel.app/" target="_blank"> showtime-movie-app.vercel.app <a/>
+
+
 
 🎨 Demo <br />
 

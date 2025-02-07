@@ -33,11 +33,12 @@
 
 🌍 Deployment <br />
 This project is deployed on Vercel. <br />
-https://movie-d10kg0zw7-abhay-wuntkals-projects.vercel.app/
+https://movie-2n1gy19zi-abhay-wuntkals-projects.vercel.app/
 
-🎨 Screenshots <br />
-🌟 Favorites Page <br />
+🎨 Demo <br />
 
-https://github.com/user-attachments/assets/da3275de-d9c2-4ea2-ba7d-2e64fccebb76
+https://github.com/user-attachments/assets/aad6ac46-b3e1-4cdf-8d49-a4bacac599e9
+
+
 
 

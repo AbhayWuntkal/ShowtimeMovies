@@ -34,7 +34,7 @@
 🌍 Deployment <br />
 This project is deployed on Vercel. <br />
 
-<a href="https://showtime-movie-app.vercel.app/" target="_blank"> showtime-movie-app.vercel.app <a/>
+<a href="https://showtime-movie-app.vercel.app/"> showtime-movie-app.vercel.app <a/>
 
 
 

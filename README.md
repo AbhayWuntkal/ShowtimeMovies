@@ -2,7 +2,7 @@
 📽️ Movie Catalog is a web application that allows users to browse and save their favorite movies.  <br /> This project is built using React, TypeScript, and Tailwind CSS, with localStorage used to persist favorite movies.
 
 🚀 Features <br />
-✅ Added Search Movies / TV Shows feature <br />
+✅ Search Movies / TV Shows  <br />
 ✅ Added movies to favorites <br />
 ✅ Remove movies from favorites <br />
 ✅ Sort movies by release date (Oldest/Newest) <br />
